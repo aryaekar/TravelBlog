@@ -9,7 +9,7 @@ function WritersCorner(props) {
     let [Blogs,SetBlogs] = useState([]);
     useEffect(()=>{
         let token = localStorage.getItem("token");
-        fetch("http://localhost:8000/blogsowner",{
+        fetch(`${process.env.REACT_APP_API_URL}/blogsowner`,{
             headers:{
                 "authorization":`Bearer ${token}`
             }

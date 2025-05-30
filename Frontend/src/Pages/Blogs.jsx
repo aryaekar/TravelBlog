@@ -6,7 +6,7 @@ function Blogs(props) {
     
     useEffect(()=>{
         let token = localStorage.getItem("token");
-        fetch("http://localhost:8000/blogs",{
+        fetch(`${process.env.REACT_APP_API_URL}/blogs`,{
             headers:{
                 "Content-Type":"application/json",
                 "authorization":`Bearer ${token}`

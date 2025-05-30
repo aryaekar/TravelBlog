@@ -6,7 +6,7 @@ function SmallBlogsCard(props) {
     let navigate = useNavigate();
     // console.log(props.Image)
     let DeleteBlog=()=>{
-        fetch(`http://localhost:8000/blogs/${props.id}`,{
+        fetch(`${process.env.REACT_APP_API_URL}/blogs/${props.id}`,{
             method:"DELETE",
             headers:{
                 "Content-Type":"application/json",

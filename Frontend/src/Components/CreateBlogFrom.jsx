@@ -24,7 +24,7 @@ function CreateBlogFrom(props) {
             Content,
             Image
         }
-        fetch("http://localhost:8000/blogs",{
+        fetch(`${process.env.REACT_APP_API_URL}/blogs`,{
             method:"POST",
             body:JSON.stringify(new_blog),
             headers:{
